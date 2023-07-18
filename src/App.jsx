@@ -1,5 +1,10 @@
+import React from "react";
+import MultiStepForm from  "./components/multi-step-form"
 function App() {
-  return <div>App</div>;
+
+  return <div>
+    <MultiStepForm/>
+  </div>;
 }
 
 export default App;
