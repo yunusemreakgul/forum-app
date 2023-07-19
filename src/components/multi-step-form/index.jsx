@@ -1,7 +1,7 @@
 import React from "react";
 
 import Sidebar from "../sidebar"
-import Step1 from "../step1"
+import Step from "../step"
 
 import * as S from "./styled"
 
@@ -10,7 +10,7 @@ function MultiStepForm() {
     return( 
     <S.MultiStepForm>
       <Sidebar/>
-      <Step1/>
+      <Step/>
     </S.MultiStepForm>
     );
   }
