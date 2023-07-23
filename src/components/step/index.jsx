@@ -1,18 +1,24 @@
 import React from "react";
 import * as S from "./styled";
 
-function step() {
+function step({
+  title,
+  subtitle,
+  hasBackButton,
+  hasNextButton,
+  children,
+}) {
 
     return (
       <S.Step>
       <S.StepHeader>
-        <S.Title>Title</S.Title>
-        <S.Subtitle>Subtitle</S.Subtitle>
+        <S.Title>{title}</S.Title>
+        <S.Subtitle>{subtitle}</S.Subtitle>
       </S.StepHeader>
-      <S.Body>Body</S.Body>
+      <S.Body> {children} </S.Body>
       <S.StepFooter>
-        <S.GoBackButton >Go Back</S.GoBackButton>
-        <S.GoNextButton >Next Step</S.GoNextButton>
+        { hasBackButton && <S.GoBackButton >Go Back</S.GoBackButton>}
+        { hasNextButton && <S.GoNextButton >Next Step</S.GoNextButton>}
       </S.StepFooter>
     </S.Step>
 
