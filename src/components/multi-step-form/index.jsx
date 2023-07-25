@@ -17,7 +17,6 @@ const Steps ={
   },
   step2: {
     component: Step2,
-    component: Step2,
     title: "Select your plan",
     subtitle: "You have the option of monthly or yearly billing",
     hasNextButton: true,
@@ -39,12 +38,12 @@ const Steps ={
 }
 
 function MultiStepForm() {
-  const [activeStep, setActiveStep] = useState("step1");
+  const [activeStep, setActiveStep] = useState("step2");
   const ActiveStep = Steps[activeStep].component
 
   return( 
     <S.MultiStepForm>
-    <Sidebar/>
+    <Sidebar activeStep={activeStep} />
     <ActiveStep 
       {...Steps[activeStep]} />
   </S.MultiStepForm>

@@ -3,11 +3,11 @@ import React from "react";
 import * as S from "./styled";
 import { Items } from "./constants.js";
 
-function Sidebar() {
+function Sidebar( activeStep ) {
     return (
       <S.Sidebar>
         {Items.map((item) => (
-        <S.Item key={item.id}>
+        <S.Item key={item.id} isActive={ activeStep === item.id }>
           <S.ItemNumber>{item.number} </S.ItemNumber>
           <S.ItemBody>
             <S.SubTitle> {item.subtitle} </S.SubTitle>

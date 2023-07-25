@@ -8,7 +8,7 @@ import * as S from "./styled";
 
 function step1(props) {
   const { step1 } =FormsJSON;
-  const hasError = true;
+  const hasError = false;
 
     return (
       <Step  {...props}>
