@@ -16,13 +16,25 @@ const Steps ={
     hasNextButton: true,
   },
   step2: {
-    component: Step2
+    component: Step2,
+    component: Step2,
+    title: "Select your plan",
+    subtitle: "You have the option of monthly or yearly billing",
+    hasNextButton: true,
+    hasBackButton: true,
   },
   step3: {
-    component: Step3
+    component: Step3,
+    title: "Pick add-ons",
+    subtitle: "Add-ons help enhance your gaming experience.",
+    hasNextButton: true,
+    hasBackButton: true,
   },
   step4: {
-    component: Step4
+    component: Step4,
+    title: "Finishing up",
+    subtitle: "Double-check eveything looks OK before confirming.",
+    hasBackButton: true,
   },
 }
 
@@ -33,7 +45,8 @@ function MultiStepForm() {
   return( 
     <S.MultiStepForm>
     <Sidebar/>
-    <ActiveStep {...Steps[activeStep]} />
+    <ActiveStep 
+      {...Steps[activeStep]} />
   </S.MultiStepForm>
   );
 };

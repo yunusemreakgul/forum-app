@@ -1,8 +1,13 @@
 import React from "react";
+import Step from "../step";
 
-function step4() {
+function step4(props) {
 
-    return <div>step4</div>;
+    return (
+      <Step {...props}>
+        Step4
+      </Step>
+    );
   }
   
   export default step4;
